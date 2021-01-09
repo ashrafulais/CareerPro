@@ -1,0 +1,88 @@
+/*!
+ * Start Bootstrap - Landing Page v5.0.9 (https://startbootstrap.com/theme/landing-page)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/LICENSE)
+ */
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/*Bootstrap overrides*/
+
+.btn-primary {
+  color: #fff;
+  background-color: #0061f2;
+  border-color: #0061f2;
+}
+
+.bg-secondary {
+  background-color: #d2d2d2!important;
+}
+
+#homepageTabs .nav-item .nav-link {
+  color: #fff;
+  background-color: #646464;
+}
+#homepageTabs .nav-item .active {
+  background-color: #0061f2;
+}
+
+/*Custom*/
+.bold-space-tb {
+  padding: 3rem 0;
+}
+
+.img-round-sm {
+  width: 150px;
+  border-radius: 50%;
+}
+/*Greater than 991px*/
+@media (min-width: 992px){
+  .bold-space-tb {
+    padding: 5rem 0;
+  }
+}
+
+.job-item h2, .job-item h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.call-to-action {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/bg-masthead.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.call-to-action .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}

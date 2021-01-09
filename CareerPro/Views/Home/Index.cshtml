@@ -1,0 +1,358 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Homepage search infos -->
+<header class="page-header bg-light bold-space-tb">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+
+                <div class="intro">
+                    <h2>Perfect Place For Companies & Candidates</h2>
+                    <p>Find your dream jobs or best candidates from here.</p>
+                </div>
+
+                <!-- Header Tabs Start -->
+                <div class="align-items-center">
+
+                    <ul class="nav nav-tabs" id="homepageTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="searchjobs-tab" data-toggle="tab" href="#searchjobs" role="tab" aria-controls="searchjobs" aria-selected="true">Search Jobs</a>
+                        </li>
+                        <li class="nav-item ml-1">
+                            <a class="nav-link" id="searchcandidate-tab" data-toggle="tab" href="#searchcandidate" role="tab" aria-controls="searchcandidate" aria-selected="false">Search Candidate</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content pt-2" id="search-tabs">
+                        <div asp-validation-summary="All">  </div>
+
+                        <div class="tab-pane fade show active" id="searchjobs" role="tabpanel" aria-labelledby="searchjobs-tab">
+                            <partial name="~/Views/Shared/Partial/_SearchJobsFormPartial.cshtml" />
+                        </div>
+                            
+                        <div class="tab-pane fade" id="searchcandidate" role="tabpanel" aria-labelledby="searchcandidate-tab">
+
+                            <form method="post" class="search-jobs-form">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 mb-4">
+                                        <input type="text" class="form-control" placeholder="John Doe">
+                                    </div>
+
+                                    <div class="col-12 col-md-6 mb-4">
+                                        <select class="form-control">
+                                            <option>Category</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 mb-4 mb-lg-0">
+                                        <button type="submit" class="btn btn-primary text-white">Search Candidate</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+
+                        </div>
+                    </div>
+                <!-- Header Tabs End -->
+
+            </div>
+            <div class="col-lg-5 d-none d-lg-block">
+                <img src="img/programming.svg" alt="creativity">
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<div class="position-relative overflow-hidden p-3 m-md-3 text-center">
+    <div class="col-md-7 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Punny headline</h1>
+        <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
+        <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+    </div>
+
+</div>
+
+<!-- job listing -->
+<section>
+    <div class="container">
+        <h2>Job Listing</h2>
+
+        <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
+            <div class="col-md-2">
+                <a href="#"><img src="img/featured-listing-1.jpg" alt="Image" class="img-fluid"></a>
+            </div>
+            <div class="col-md-8">
+                <h2><a href="#">Dropbox Product Designer</a> </h2>
+                <p class="meta">Publisher: <strong>John Stewart</strong> In: <strong>IT</strong></p>
+            </div>
+            <div class="col-md-2">
+                <strong class="text-black">50000</strong>
+            </div>
+        </div>
+
+        <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
+            <div class="col-md-2">
+                <a href="job-single.html"><img src="img/featured-listing-2.jpg" alt="Image" class="img-fluid"></a>
+            </div>
+            <div class="col-md-8">
+                <h2><a href="job-single.html">Creative Director in Intercom</a> </h2>
+                <p class="meta">Publisher: <strong>John Stewart</strong> In: <strong>Engineering</strong></p>
+            </div>
+
+            <div class="col-md-2">
+                <strong class="text-black">60000</strong>
+            </div>
+        </div>
+
+
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+
+
+    </div>
+</section>
+
+<!-- login -->
+<section class="login-form">
+    <div class="container">
+        <h3>Login Form - Company / Employee</h3>
+
+        <div class="row">
+            <div class="col-lg-8 p-0">
+                <form class="form-horizontal" action="/action_page.php">
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd">Password:</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label><input type="checkbox"> Remember me</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- signup -->
+<section class="signup-form">
+    <div class="container">
+        <h3>Signup Form - Company / Employee</h3>
+
+        <div class="row">
+            <div class="col-lg-8 p-0">
+                <form class="form-horizontal" action="/action_page.php">
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="businessemail">Business Email:</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="businessemail" placeholder="Enter email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="signuppwd">Password:</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="signuppwd" placeholder="Enter password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="signuppwd2">Confirm Password:</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="signuppwd2" placeholder="Confirm password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label class="control-label col-sm-4" for="inlineFormCustomSelect">I am looking for:</label>
+                        <div class="col-sm-10">
+                            <select class="custom-select" id="inlineFormCustomSelect">
+                                <option value="" selected>Choose...</option>
+                                <option value="1">Jobs</option>
+                                <option value="2">Skilled Employees</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Signup</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- job post -->
+<section class="signup-form">
+    <div class="container">
+        <h3>Post Job Form</h3>
+
+        <div class="row">
+            <div class="col-lg-8 p-0">
+                <form class="form-horizontal" action="/action_page.php">
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Job Title:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="ASP.NET Core Software Engineer">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Job Description:</label>
+                        <div class="col-sm-10">
+                            <textarea type="text" class="form-control" maxlength="500" rows="5"> </textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label class="control-label col-sm-4">Job category:</label>
+                        <div class="col-sm-10">
+                            <select class="custom-select">
+                                <option value="" selected>Choose...</option>
+                                <option value="1">IT</option>
+                                <option value="2">Engineering</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Salary Range (BDT):</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" placeholder="60000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Contact Email:</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" placeholder="name@company.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Last Date of Application:</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Post Job</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- person profile -->
+<section class="people-profile-page">
+    <div class="container">
+
+        <div class="row">
+            <h3>Profile Employee</h3>
+        </div>
+
+        <div class="row align-items-center pt-2">
+            <div class="col-3">
+                <img src="img/person-demo.jpg" alt="image" class="img-fluid img-round-sm">
+            </div>
+            <div class="col-8">
+                <h4>John Doe</h4>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Career Objective</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Resume file: <a href="#" class="card-link">Resume.pdf</a> </li>
+                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

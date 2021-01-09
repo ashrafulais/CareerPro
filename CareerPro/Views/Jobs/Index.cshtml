@@ -1,0 +1,74 @@
+﻿@model SearchJobViewModel
+@{
+    ViewData["Title"] = "Jobs Listing";
+}
+
+<!-- Job page search infos -->
+<header class="page-header bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-7">
+
+                <div class="intro">
+                    <h2>Search Jobs</h2>
+                    <p>Find your dream jobs from here.</p>
+
+                    <partial name="~/Views/Shared/Partial/_SearchJobsFormPartial.cshtml" />
+                </div>
+
+            </div>
+            <div class="col-lg-5 col-md-4 col-sm-5">
+                <img src="~/img/programming.svg" alt="creativity">
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<!-- job listing -->
+<section>
+    <div class="container">
+        <h2>Job Listing</h2>
+
+        @if (Model.JobsCount > 0)
+        {
+            @foreach (var jobView in Model.Jobs)
+            {
+                <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
+                    <div class="col-md-2 col-sm-3">
+                        <a href="#"><img src="~/@jobView.PublisherPhoto" alt="@jobView.PublisherName Photo" class="img-fluid"></a>
+                    </div>
+                    <div class="col-md-8">
+                        <h2><a asp-action="JobSingle" asp-route-id="@jobView.JobID">@jobView.Title</a> </h2>
+                        <p class="meta">Publisher: <strong>@jobView.PublisherName</strong> In: <strong>@jobView.JobCategory</strong></p>
+                    </div>
+                    <div class="col-md-2">
+                        <strong class="text-black">@jobView.Salary</strong>
+                    </div>
+                </div>
+            }
+
+            <nav aria-label="...">
+                <ul class="pagination">
+                    @for (int pageIndex = 1; pageIndex <= Model.PaginateCount; pageIndex++)
+                    {
+                    <li class="page-item">
+                        <a class="page-link" asp-controller="Jobs" asp-action="Page" 
+                           asp-route-pagenumber="@pageIndex"
+                           asp-route-jobtitle="@ViewData["JobTitle"]"
+                           asp-route-jobcategory="@ViewData["JobCategory"]"
+                           > @pageIndex </a>
+                    </li>
+                    }
+
+                </ul>
+            </nav>
+        }
+        else
+        {
+            <h2>No Jobs Found</h2>
+        }
+
+    </div>
+</section>
+

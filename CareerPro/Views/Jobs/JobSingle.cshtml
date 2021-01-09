@@ -1,0 +1,31 @@
+﻿@model JobViewModel
+@{
+    ViewData["Title"] = Model.Title;
+}
+<!-- Job Single search infos -->
+<header class="page-header bg-light">
+    <div class="container">
+        <div class="row align-items-center pt-3">
+            <div class="col-lg-7 col-md-7">
+
+                <div class="intro">
+                    <h3>Job: @Model.Title</h3>
+                    <p>Description: @Model.Description</p>
+                </div>
+
+            </div>
+            <div class="col-lg-5 col-md-4 col-sm-5">
+                <img class="w-100" src="~/img/Social strategy-rafiki.png" alt="creativity">
+            </div>
+        </div>
+
+        <div>
+            <h5>Job Details</h5>
+            <p>Job Address: @Model.Address</p>
+            <p>Salary: @Model.Salary</p>
+            <p>Publisher: @Model.PublisherName</p>
+            <p>Email: @Model.PublisherEmail</p>
+        </div>
+
+    </div>
+</header>

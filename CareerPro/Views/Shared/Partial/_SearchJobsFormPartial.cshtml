@@ -1,0 +1,21 @@
+﻿@model SearchJobViewModel
+
+<form asp-controller="Jobs" asp-action="SearchJobs" method="post" class="search-jobs-form">
+    <div class="row">
+        <div class="col-12 col-md-6 mb-4">
+            <input asp-for="JobTitle" class="form-control" placeholder="Job title, keywords...">
+        </div>
+        <div class="col-12 col-md-6 mb-4 mb-lg-0">
+            <select asp-for="SelectedJobCategory.CategoryID" class="form-control">
+                <option value="">Job Category</option>
+                @foreach (var data in Model.JobCategories)
+                {
+                    <option value="@data.CategoryID">@data.CategoryName</option>
+                }
+            </select>
+        </div>
+        <div class="col-12 col-md-6 mb-4">
+            <button type="submit" class="btn btn-primary text-white">Search Jobs</button>
+        </div>
+    </div>
+</form>
